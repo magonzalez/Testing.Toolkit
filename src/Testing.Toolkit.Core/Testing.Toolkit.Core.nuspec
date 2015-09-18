@@ -1,0 +1,17 @@
+﻿<package>
+  <metadata>
+    <id>Testing.Toolkit.Core</id>
+    <version>1.0.0.0</version>
+    <authors>Miguel A. Gonzalez</authors>
+    <description>Several useful testing tools, classes and extensions.</description>
+    <language>en-US</language>
+    <projectUrl>https://github.com/magonzalez/Testing.Toolkit/blob/master/README.markdown</projectUrl>
+    <licenseUrl>https://github.com/magonzalez/Testing.Toolkit/blob/master/license.txt</licenseUrl>
+    <dependencies>
+      <dependency id="Should.Extensions" version="1.0.0" />
+    </dependencies>
+  </metadata>
+  <files>
+	  <file src="build\output\Testing.Toolkit.Core.dll" target="lib" />
+  </files>
+</package>

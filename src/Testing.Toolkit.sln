@@ -1,0 +1,41 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Misc", "Misc", "{FF3CC0CE-5D20-430F-8E2A-5C0FC1AAD622}"
+	ProjectSection(SolutionItems) = preProject
+		..\build.bat = ..\build.bat
+		CommonAssemblyInfo.cs = CommonAssemblyInfo.cs
+		..\default.ps1 = ..\default.ps1
+		..\README.md = ..\README.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{6A75FB10-C418-4EB1-A8C4-DE6B16D16382}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Testing.Toolkit.Core", "Testing.Toolkit.Core\Testing.Toolkit.Core.csproj", "{249604EB-EBC0-435B-9757-1925B3E7982E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Testing.Toolkit.UnitTests", "Testing.Toolkit.UnitTests\Testing.Toolkit.UnitTests.csproj", "{FA951492-BD9F-4503-AC07-FDFBA370358A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{249604EB-EBC0-435B-9757-1925B3E7982E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{249604EB-EBC0-435B-9757-1925B3E7982E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{249604EB-EBC0-435B-9757-1925B3E7982E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{249604EB-EBC0-435B-9757-1925B3E7982E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FA951492-BD9F-4503-AC07-FDFBA370358A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FA951492-BD9F-4503-AC07-FDFBA370358A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FA951492-BD9F-4503-AC07-FDFBA370358A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FA951492-BD9F-4503-AC07-FDFBA370358A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{FA951492-BD9F-4503-AC07-FDFBA370358A} = {6A75FB10-C418-4EB1-A8C4-DE6B16D16382}
+	EndGlobalSection
+EndGlobal
