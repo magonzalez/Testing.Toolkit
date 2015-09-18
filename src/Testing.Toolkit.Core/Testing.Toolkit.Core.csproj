@@ -64,7 +64,9 @@
     <Compile Include="Data\Builder.cs" />
     <Compile Include="Data\RandomData.cs" />
     <Compile Include="Extensions\ConfigurationExtensions.cs" />
+    <Compile Include="ToolkitSetUpFixture.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Data\SqlValuePropertyNamer.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
