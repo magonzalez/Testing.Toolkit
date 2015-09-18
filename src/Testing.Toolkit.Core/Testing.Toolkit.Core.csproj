@@ -61,7 +61,8 @@
     <Compile Include="BaseTestFixture.cs" />
     <Compile Include="Configuration\TempAppSettings.cs" />
     <Compile Include="Configuration\TempConnectionStrings.cs" />
-    <Compile Include="Data\Builder.cs" />
+    <Compile Include="Data\DataBuilder.cs" />
+    <Compile Include="Data\IDataBuilder.cs" />
     <Compile Include="Data\RandomData.cs" />
     <Compile Include="Extensions\ConfigurationExtensions.cs" />
     <Compile Include="ToolkitSetUpFixture.cs" />
