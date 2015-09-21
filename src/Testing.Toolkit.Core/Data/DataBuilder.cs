@@ -14,16 +14,6 @@ namespace Testing.Toolkit.Core.Data
 
         protected Guid BuilderId { get; private set; }
 
-        public virtual IEnumerable<TDataModel> BuildAndSave(int count)
-        {
-            throw new NotImplementedException("Save is not implemented by default.");
-        }
-
-        public virtual TDataModel BuildAndSave()
-        {
-            throw new NotImplementedException("Save is not implemented by default.");
-        }
-
         public virtual IEnumerable<TDataModel> Build(int count)
         {
             return FizzWare.NBuilder.Builder<TDataModel>

@@ -39,7 +39,7 @@ namespace Testing.Toolkit.Core.Data
             return (RandomNumber.Next(0, 1000) % 2) == 0;
         }
 
-        public static int GetRandomNumber(int minNumber = 0, int maxNumber = Int32.MaxValue)
+        public static int GetRandomNumber(int minNumber = 0, int maxNumber = int.MaxValue)
         {
             return RandomNumber.Next(minNumber, maxNumber);
         }

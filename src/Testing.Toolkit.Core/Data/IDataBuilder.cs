@@ -9,9 +9,6 @@ namespace Testing.Toolkit.Core.Data
     public interface IDataBuilder<out TDataModel>
         where TDataModel : class
     {
-        IEnumerable<TDataModel> BuildAndSave(int count);
-        TDataModel BuildAndSave();
-
         IEnumerable<TDataModel> Build(int count);
         TDataModel Build();
     }
