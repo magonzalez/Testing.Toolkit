@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Linq;
+using FizzWare.NBuilder.Extensions;
 
 namespace Testing.Toolkit.Core.Data
 {
@@ -66,6 +67,38 @@ namespace Testing.Toolkit.Core.Data
             var values = Enum.GetValues(type);
 
             return (T)values.GetValue(RandomNumber.Next(0, values.Length));
+        }
+
+        public static TEnum GetRandomEnumNotDefault<TEnum>()
+        {
+            var value = GetRandomEnumValue<TEnum>();
+            while (value.IsDefaultValue())
+            {
+                value = GetRandomEnumValue<TEnum>();
+            }
+
+            return value;
+        }
+
+        public static bool? GetRandomNullableBoolean()
+        {
+            return GetRandomBoolean()
+                ? (bool?)GetRandomBoolean()
+                : null;
+        }
+
+        public static int? GetRandomNullableNumber(int minNumber = 0, int maxNumber = int.MaxValue)
+        {
+            return GetRandomBoolean()
+                ? (int?)GetRandomNumber(minNumber, maxNumber)
+                : null;
+        }
+
+        public static DateTime? GetRandomNullableDateTime(int minDateOffset = 0, int maxDateOffset = 365, bool future = false)
+        {
+            return GetRandomBoolean()
+                ? (DateTime?)GetRandomDateTime(minDateOffset, maxDateOffset, future)
+                : null;
         }
     }
 }

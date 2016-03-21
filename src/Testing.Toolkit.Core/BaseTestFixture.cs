@@ -44,16 +44,6 @@ namespace Testing.Toolkit.Core
             // Do nothing for now...
         }
 
-        public int GetRandomNumber(int minNumber = 0, int maxNumber = int.MaxValue)
-        {
-            return RandomData.GetRandomNumber(minNumber, maxNumber);
-        }
-
-        public bool GetRandomBool()
-        {
-            return RandomData.GetRandomBoolean();
-        }
-
         public T GetRandomElement<T>(IEnumerable<T> items)
         {
             return items.GetRandomElement();
@@ -64,14 +54,44 @@ namespace Testing.Toolkit.Core
             return items.GetRandomElements(count);
         }
 
+        public bool GetRandomBool()
+        {
+            return RandomData.GetRandomBoolean();
+        }
+
+        public bool? GetRandomNullableBool()
+        {
+            return RandomData.GetRandomNullableBoolean();
+        }
+
+        public int GetRandomNumber(int minNumber = 0, int maxNumber = int.MaxValue)
+        {
+            return RandomData.GetRandomNumber(minNumber, maxNumber);
+        }
+
+        public int? GetRandomNullableNumber(int minNumber = 0, int maxNumber = int.MaxValue)
+        {
+            return RandomData.GetRandomNullableNumber(minNumber, maxNumber);
+        }
+
         public DateTime GetRandomDateTime(int minDateOffset = 0, int maxDateOffset = 365, bool future = false)
         {
             return RandomData.GetRandomDateTime(minDateOffset, maxDateOffset, future);
         }
 
+        public DateTime? GetRandomNullableDateTime(int minDateOffset = 0, int maxDateOffset = 365, bool future = false)
+        {
+            return RandomData.GetRandomNullableDateTime(minDateOffset, maxDateOffset, future);
+        }
+
         public T GetRandomEnumValue<T>()
         {
             return RandomData.GetRandomEnumValue<T>();
+        }
+
+        public T GetRandomEnumValueNotDefault<T>()
+        {
+            return RandomData.GetRandomEnumNotDefault<T>();
         }
 
         public static void ThrowsAsync(Func<Task> task)
