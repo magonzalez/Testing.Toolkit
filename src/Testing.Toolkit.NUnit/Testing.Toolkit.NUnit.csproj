@@ -4,14 +4,13 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{249604EB-EBC0-435B-9757-1925B3E7982E}</ProjectGuid>
+    <ProjectGuid>{841B7284-F73A-4515-9547-51CCD28D8109}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Testing.Toolkit.Core</RootNamespace>
-    <AssemblyName>Testing.Toolkit.Core</AssemblyName>
+    <RootNamespace>Testing.Toolkit.NUnit</RootNamespace>
+    <AssemblyName>Testing.Toolkit.NUnit</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -35,16 +34,15 @@
       <HintPath>..\packages\NBuilder.3.0.1.1\lib\FizzWare.NBuilder.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="nunit.framework, Version=3.2.1.0, Culture=neutral, PublicKeyToken=2638cd05610744eb, processorArchitecture=MSIL">
+      <HintPath>..\packages\NUnit.3.2.1\lib\net45\nunit.framework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Should, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Should.1.1.20\lib\Should.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Should.Extensions, Version=1.0.0.2, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Should.Extensions.1.0.0.2\lib\Should.Extensions.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
     <Reference Include="System" />
-    <Reference Include="System.configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -54,18 +52,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Configuration\TempAppSettings.cs" />
-    <Compile Include="Configuration\TempConnectionStrings.cs" />
-    <Compile Include="Data\DataBuilder.cs" />
-    <Compile Include="Data\IDataBuilder.cs" />
-    <Compile Include="Data\RandomData.cs" />
-    <Compile Include="Extensions\ConfigurationExtensions.cs" />
+    <Compile Include="BaseTestFixture.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Data\SqlValuePropertyNamer.cs" />
+    <Compile Include="ToolkitSetupFixture.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
-    <None Include="Testing.Toolkit.Core.nuspec" />
+    <None Include="Testing.Toolkit.NUnit.nuspec" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Testing.Toolkit.Core\Testing.Toolkit.Core.csproj">
+      <Project>{249604eb-ebc0-435b-9757-1925b3e7982e}</Project>
+      <Name>Testing.Toolkit.Core</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -1,9 +1,8 @@
 ﻿using FizzWare.NBuilder;
 using NUnit.Framework;
-
 using Testing.Toolkit.Core.Data;
 
-namespace Testing.Toolkit.Core
+namespace Testing.Toolkit.NUnit
 {
     [SetUpFixture]
     public class ToolkitSetUpFixture

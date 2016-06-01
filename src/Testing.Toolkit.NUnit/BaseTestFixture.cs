@@ -6,7 +6,7 @@ using NUnit.Framework;
 using Should;
 using Testing.Toolkit.Core.Data;
 
-namespace Testing.Toolkit.Core
+namespace Testing.Toolkit.NUnit
 {
     public abstract class BaseTestFixture
     {

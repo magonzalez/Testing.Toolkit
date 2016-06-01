@@ -1,6 +1,6 @@
 # Generate build label
 if($env:BUILD_NUMBER -ne $null) {
-    $env:buildlabel = "$env:TEAMCITY_PROJECT_NAME $env:TEAMCITY_BUILDCONF_NAME $env:BUILD_NUMBER on $(Get-Date -Format g)"
+    $env:buildlabel = "Testing.Toolkit version $env:BUILD_NUMBER built on $(Get-Date -Format g)"
     $env:buildconfig = "Release"
 	$env:manualbuild = $false
 }
@@ -28,7 +28,9 @@ properties {
 	$nuget ="$base_dir\tools\nuget\nuget.exe"
 	$nuget_dir = "$build_dir\nuget"
 	$nuget_base_path = "$base_dir"
-	$nuspec_file = "$source_dir\Testing.Toolkit.Core\Testing.Toolkit.Core.nuspec"
+	$nuspec_file_core = "$source_dir\Testing.Toolkit.Core\Testing.Toolkit.Core.nuspec"
+	$nuspec_file_mstest = "$source_dir\Testing.Toolkit.MsTest\Testing.Toolkit.MsTest.nuspec"
+	$nuspec_file_nunit = "$source_dir\Testing.Toolkit.NUnit\Testing.Toolkit.NUnit.nuspec"
 }
 
 task default -depends Init, CommonAssemblyInfo, Compile, Test, Nuget -Precondition {
@@ -91,7 +93,9 @@ task Nuget {
 		$nugetBuildNumber = $matches[1]
 	}
 
-	exec { invoke-expression "$nuget pack $nuspec_file -BasePath $nuget_base_path  -Version $nugetBuildNumber -OutputDirectory $nuget_dir" }
+	exec { invoke-expression "$nuget pack $nuspec_file_core -BasePath $nuget_base_path  -Version $nugetBuildNumber -OutputDirectory $nuget_dir" }
+	exec { invoke-expression "$nuget pack $nuspec_file_mstest -BasePath $nuget_base_path  -Version $nugetBuildNumber -OutputDirectory $nuget_dir" }
+	exec { invoke-expression "$nuget pack $nuspec_file_nunit -BasePath $nuget_base_path  -Version $nugetBuildNumber -OutputDirectory $nuget_dir" }
 }
 
 

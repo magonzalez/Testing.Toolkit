@@ -1,22 +1,21 @@
 ﻿<package>
   <metadata>
-    <id>Testing.Toolkit.Core</id>
-    <version>1.0.0.0</version>
+    <id>Testing.Toolkit.NUnit</id>
+    <version>$version$</version>
     <authors>Miguel A. Gonzalez</authors>
-    <description>Several useful testing tools, classes and extensions.</description>
+    <description>Several useful testing tools, classes and extensions for NUnit.</description>
     <language>en-US</language>
     <projectUrl>https://github.com/magonzalez/Testing.Toolkit/blob/master/README.markdown</projectUrl>
     <licenseUrl>https://github.com/magonzalez/Testing.Toolkit/blob/master/license.txt</licenseUrl>
     <dependencies>
+      <dependency id="NUnit" version="3.0.0" />
       <dependency id="NBuilder" version="3.0.0" />
       <dependency id="Should" version="1.0.0" />
       <dependency id="Should.Extensions" version="1.0.0" />
+      <dependency id="Testing.Toolkit.Core" version="$version$" />
     </dependencies>
-    <frameworkAssemblies>
-      <frameworkAssembly assemblyName="Microsoft.VisualStudio.QualityTools.UnitTestFramework" targetFramework="net40" />
-    </frameworkAssemblies>
   </metadata>
   <files>
-	  <file src="build\output\Testing.Toolkit.Core.dll" target="lib" />
+	  <file src="build\output\Testing.Toolkit.NUnit.dll" target="lib" />
   </files>
 </package>
