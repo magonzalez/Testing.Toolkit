@@ -54,6 +54,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="TestFixtureBase.cs" />
     <Compile Include="Configuration\TempAppSettings.cs" />
     <Compile Include="Configuration\TempConnectionStrings.cs" />
     <Compile Include="Data\DataBuilder.cs" />

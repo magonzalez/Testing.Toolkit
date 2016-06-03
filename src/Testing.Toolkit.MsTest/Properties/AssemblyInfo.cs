@@ -11,7 +11,7 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("Testing.Toolkit")]
-[assembly: AssemblyDescription("Testing.Toolkit version 0.0.0.4 built on 6/1/2016 3:24 PM")]
+[assembly: AssemblyDescription("Testing.Toolkit version 0.0.0.5 built on 6/3/2016 1:04 AM")]
 #if DEBUG
 [assembly: AssemblyConfiguration("Debug")]
 #else
@@ -37,5 +37,5 @@ using System.Runtime.InteropServices;
 //
 // You can specify all the values or you can default the Revision and Build Numbers
 // by using the '*' as shown below:
-[assembly: AssemblyVersion("0.0.0.4")]
-[assembly: AssemblyFileVersion("0.0.0.4")]
+[assembly: AssemblyVersion("0.0.0.5")]
+[assembly: AssemblyFileVersion("0.0.0.5")]
